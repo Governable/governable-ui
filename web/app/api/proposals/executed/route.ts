@@ -31,11 +31,7 @@ export async function GET(req: NextRequest): Promise<Response> {
       return NextResponse.json({ error: 'vaultContract is required' }, { status: 400 });
     }
 
-    const provider = getRpcProviderForChain(
-      moonbaseAlpha,
-      // 'https://moonbase-alpha.blastapi.io/f7035b76-d882-4aee-ae2c-96b27f5a3a9c',
-      'https://rpc.api.moonbase.moonbeam.network',
-    );
+    const provider = getRpcProviderForChain(moonbaseAlpha);
 
     const event = parseAbiItem('event GovernableProposalExecuted(uint256 proposalId)');
     const logs = await provider.getLogs({

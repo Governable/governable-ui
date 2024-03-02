@@ -1,19 +1,26 @@
-# Build Onchain Apps Toolkit
+# Governable UI
 
-This project has two main folders:
+Governable UI is a web application that allows users to participate in DAO governance on gas-efficient Layer 2 networks.
+
+"Cross-chain governance for any ERC20 or ERC721 token, with or without checkpoints.
+Vote on L2. Execute on L1."
+
+Built using:
+
+-   [Brevis](https://brevis.network/)
+-   [Wormhole](https://wormhole.com/)
+-   UI Bootstrapped with [Coinbase build-onchain-apps](https://github.com/coinbase/build-onchain-apps)
+
+Built for the [EthDenver2024 Hackathon](https://devfolio.co/projects/governable-452a).
+
+## Installation
 
 ```bash
-.
-├── contracts
-│   ├── src
-│   ├── broadcast
-│   ├── script
-│   └── test
-└── web
-    ├── app
-    └── src
+cd web && yarn
 ```
 
-[contracts](/contracts/README.md) folder contains all the solidity code
+## Development
 
-[web](/web/README.md) folder contains all the frontend code
+```bash
+cd web && yarn dev
+```

@@ -100,8 +100,10 @@ export default function Proposal({
     <div className="container mx-auto flex flex-col gap-1 rounded-lg border-2 p-3">
       <div>ID: {id}</div>
       <div>{title}</div>
+      <div className="tex-xs uppercase">Description</div>
       <div className="text-xs">{description.slice(0, 512)}...</div>
       <div>
+        <div className="tex-xs uppercase">Brevis Proof ID</div>
         <input
           type="text"
           className="w-full rounded-md border-2 p-2 text-xs"

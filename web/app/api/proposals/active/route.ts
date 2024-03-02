@@ -27,10 +27,7 @@ export async function GET(req: NextRequest): Promise<Response> {
       return NextResponse.json({ error: 'governance is required' }, { status: 400 });
     }
 
-    const provider = getRpcProviderForChain(
-      chain,
-      'https://eth-sepolia.g.alchemy.com/v2/yh2nmCNbhu5i9tVihqa2B4mH_BENwg80',
-    );
+    const provider = getRpcProviderForChain(chain);
 
     const event = parseAbiItem(
       'event ProposalCreated(uint id, address proposer, address[] targets, uint[] values, string[] signatures, bytes[] calldatas, uint startBlock, uint endBlock, string description)',
