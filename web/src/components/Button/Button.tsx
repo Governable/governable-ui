@@ -30,8 +30,7 @@ export default function Button({
       className={clsx(
         'flex w-full items-center justify-center',
         'py-4 text-sm',
-        variant === 'primary' ? 'bg-white' : 'bg-black',
-        variant === 'primary' ? 'text-black' : 'text-white',
+        variant === 'primary' ? 'bg-lime-600' : 'bg-red-600',
         disabled && variant === 'primary' ? 'bg-gray-400' : null,
         disabled && variant === 'secondary' ? 'bg-boat-color-gray-900' : null,
         rounded ? 'rounded-full' : null,
